@@ -4,7 +4,7 @@ const isMobile = /Mobi/i.test(window.navigator.userAgent); // "Mobi" 가 User ag
 
 const FloatingButton = () => {
     let lastScrollY = window.scrollY;
-    const audioUrl = 'https://firebasestorage.googleapis.com/v0/b/wedding-9b3cb.appspot.com/o/Ordinary_Confession.mp3?alt=media&token=3a07d846-1c0d-4d9d-bd61-af2f39f48be6'
+    const audioUrl = 'https://firebasestorage.googleapis.com/v0/b/wedding-9b3cb.appspot.com/o/Ordinary_Confession_s.mp3?alt=media&token=5d45839e-c367-4843-b2f9-22e5bbbe3a14'
 
     // UP 버튼
     const [topBtnBottom, setTopBtnBottom] = useState(-5.2);
