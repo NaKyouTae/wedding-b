@@ -22,7 +22,7 @@ const Contact = () => {
                         </li>
                     </ul>
                 </li>
-                <li>
+                <li data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-easing="ease-in-out" data-aos-duration="800">
                     <h4>신부 어머니 이현정</h4>
                     <ul>
                         <li>
