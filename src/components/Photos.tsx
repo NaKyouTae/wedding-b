@@ -42,7 +42,7 @@ const Photos = () => {
                 <Swiper
                     slidesPerView={1}
                     centeredSlides={true}
-                    spaceBetween={16}
+                    spaceBetween={6}
                     loop={true}
                     pagination={true}
                     modules={[Pagination]}
