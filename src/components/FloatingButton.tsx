@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 
-const isMobile = /Mobi/i.test(window.navigator.userAgent); // "Mobi" 가 User agent에 포함되어 있으면 모바일
+const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent); // "Mobi" 가 User agent에 포함되어 있으면 모바일
 
 const FloatingButton = () => {
     let lastScrollY = window.scrollY;
@@ -39,9 +39,12 @@ const FloatingButton = () => {
     };
 
     const initAudio = () => {
-        if(isMobile) {
-            console.log('aa', window.navigator.userAgent)
-            togglePlay()
+        if (typeof window !== "undefined") {
+            if (window.innerWidth > 768) {
+                if(isMobile) {
+                    togglePlay()
+                }
+            }
         }
     }
 
