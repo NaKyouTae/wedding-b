@@ -128,6 +128,10 @@ $(document).ready(function() {
 
 // copy
 function onCopy(text) {
+    const userAgent = navigator.userAgent;
+
+    alert(userAgent);
+
     if (/iPhone|iPad|iPod/i.test(userAgent)) {
         navigator.clipboard.writeText(text).then(() => {
             var $toast = $('#toast');
@@ -151,6 +155,8 @@ function onCall(number) {
 // massage
 function sendSms(number) {
     const userAgent = navigator.userAgent;
+
+    alert(userAgent);
 
     if (/iPhone|iPad|iPod/i.test(userAgent)) {
         console.log("iOS 디바이스입니다.");
