@@ -130,21 +130,19 @@ $(document).ready(function() {
 function onCopy(text) {
     const userAgent = navigator.userAgent;
 
-    alert(userAgent);
+    navigator.clipboard.writeText(text).then(() => {
+        var $toast = $('#toast');
 
-    if (/iPhone|iPad|iPod/i.test(userAgent)) {
-        navigator.clipboard.writeText(text).then(() => {
-            var $toast = $('#toast');
-
-            if(!$toast.hasClass('active')) {
+        if (/iPhone|iPad|iPod/i.test(userAgent)) {
+            if (!$toast.hasClass('active')) {
                 $toast.addClass('active');
             }
+        }
 
-            setTimeout(() => {
-                $toast.removeClass('active');
-            }, 1500);
-        });
-    }
+        setTimeout(() => {
+            $toast.removeClass('active');
+        }, 1500);
+    });
 }
 
 // call
@@ -155,8 +153,6 @@ function onCall(number) {
 // massage
 function sendSms(number) {
     const userAgent = navigator.userAgent;
-
-    alert(userAgent);
 
     if (/iPhone|iPad|iPod/i.test(userAgent)) {
         console.log("iOS 디바이스입니다.");
