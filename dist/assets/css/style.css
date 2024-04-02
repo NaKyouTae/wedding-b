@@ -71,12 +71,13 @@
 .traffic > li p > br {display: none;}
 .traffic > li ul > li {font-size: 1.5rem; line-height: 1.8; word-break: keep-all;}
 .traffic > li .shuttle {flex: initial; width: calc(100% - 8rem); display: flex; column-gap: .8rem; margin-left: auto; margin-top: .8rem;}
-.traffic > li .shuttle > a {width: calc((100% - .8rem) / 2); height: 2.8rem; padding: 0 1.6rem; display: flex; align-items: center; justify-content: center; column-gap: .8rem; background-color: var(--gray01); border: 1px solid #ededed; border-radius: .2rem; font-size: 1.4rem; font-weight: 500; white-space: nowrap;}
+.traffic > li .shuttle > a {width: calc((100% - .8rem) / 2); height: 2.8rem; padding: 0 1.6rem; display: flex; align-items: center; justify-content: center; column-gap: .8rem; background-color: var(--gray01); border: 1px solid #ededed; border-radius: .2rem; font-size: 1.4rem; font-weight: 500; white-space: nowrap; font-family: 'Pretendard';}
 
 /* contact */
 .contact {display: flex; flex-flow: column; row-gap: 4rem;}
 .contact > li {display: flex; flex-flow: column; row-gap: 1.6rem;}
-.contact > li > h3 {font-size: 1.6rem; font-weight: 500;}
+.contact > li > h3 {font-size: 1.6rem; font-weight: 500; display: flex; align-items: center; column-gap: .4rem;}
+.contact > li > h3 > i {width: 1.6rem; height: 1.6rem;}
 .contact > li > h4 {font-size: 1.6rem; font-weight: 500;}
 .contact > li > ul {display: flex; flex-flow: column; row-gap: .8rem;}
 .contact > li > ul > li {display: flex; align-items: center; justify-content: space-between; column-gap: .8rem;}
@@ -103,9 +104,12 @@
 .calendar .week > li {height: 2.8rem; display: flex; align-items: center; justify-content: center; font-size: 1.6rem;}
 .calendar .day {display: grid; grid-template-columns: repeat(7, 1fr); justify-content: space-between; row-gap: 1.2rem; margin-top: 1.6rem;}
 .calendar .day > li {height: 2.8rem; display: flex; align-items: center; justify-content: center;}
-.calendar .day > li > p {width: 2.6rem; height: 2.6rem; font-size: 1.4rem; position: relative; z-index: 2; text-align: center; display: flex; align-items: center; justify-content: center; line-height: 1;}
-.calendar .day > li.prev, .calendar .day > li.next {color: var(--gray02);}
-.calendar .day > li.point > p {color: #C8102E; font-weight: 700;}
+.calendar .day > li > p {font-size: 1.4rem; position: relative; z-index: 2; text-align: center; font-family: 'Pretendard';}
+.calendar .day > li.prev,
+.calendar .day > li.next {color: var(--gray02);}
+.calendar .day > li.point {position: relative; color: #C8102E;}
+.calendar .day > li.point > p {font-weight: 500;}
+.calendar .day > li.point::before {content: ''; width: 2.6rem; height: 2.6rem; border-radius: 100%; background-color: #FBECEE; position: absolute;}
 
 .calendar + p {margin-top: 3rem; font-size: 1.6rem; text-align: center; line-height: 2;}
 .calendar + p > span {font-weight: 600;}
